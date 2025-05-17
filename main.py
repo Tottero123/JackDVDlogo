@@ -1,16 +1,5 @@
 import pygame
 import sys
-import os
-import sys
-
-def resource_path(filename):
-    if hasattr(sys, '_MEIPASS'):
-        return os.path.join(sys._MEIPASS, filename)
-    else:
-        return os.path.join(os.path.abspath("."), filename)
-
-# Use:
-image = pygame.image.load(resource_path("jack.png")).convert_alpha()
 
 # Init
 pygame.init()
@@ -18,7 +7,7 @@ screen = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("Jack")
 
 # Load and scale image
-
+image = pygame.image.load("jack.png").convert_alpha()
 jackImage = pygame.transform.scale(image, (100, 100))
 
 # Position and velocity
